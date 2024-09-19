@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.profile.service;
+
+service ProfileService {
+  rpc profile(ProfileRequest) returns (ProfileResponse);
+}
+
+message ProfileRequest {
+  string name = 1;
+  string age = 2;
+}
+
+message ProfileResponse {
+  string profile = 1;
+}
